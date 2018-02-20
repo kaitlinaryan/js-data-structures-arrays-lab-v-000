@@ -17,17 +17,18 @@ drivers.shift();
 }
 
 function appendDriver (name){
-drivers.splice(2,0, name);
+[drivers...name];
+
 }
 
 function prependDriver (name){
-drivers.splice(0,0, name);
+[name...drivers];
 }
 
 function removeLastDriver (){
-drivers.splice(2,1);
+drivers.slice(2)
 }
 
 function removeFirstDriver (){
-drivers.splice(0,1);
+drivers.slice(1)
 }
